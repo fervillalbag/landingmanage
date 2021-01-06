@@ -1,6 +1,7 @@
 
 import Head from 'next/head'
 import { useState } from 'react';
+import Header from '../layout/Header';
 import Navbar from '../layout/Navbar'
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
             isMenuActive={isMenuActive}
             handleClicMenu={handleClicMenu}
          />
+         <Header />
       </div>
    )
 }

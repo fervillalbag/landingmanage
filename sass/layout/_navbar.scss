@@ -3,6 +3,11 @@
    height: 8rem;
    position: sticky;
    top: 0;
+   z-index: 10;
+
+   &.active {
+      background-color: $VaryLightGray;
+   }
 
    > .container {
       display: grid;
@@ -41,6 +46,10 @@
 
       &.active {
          transform: translateX(-50%) translateY(0);
+
+         @include responsive($breakpointDesktop) {
+            transform: translateX(0) translateY(0);
+         }
       }
 
       @include responsive($breakpointDesktop) {
@@ -76,18 +85,23 @@
          padding-bottom: 2rem;
          color: $DarkBlue;
          font-weight: 700;
+         transition: color 300ms ease;
          
          @include responsive($breakpointDesktop) {
             padding-top: 0;
             padding-bottom: 0;
             font-size: 1.5rem;
+
+            &:hover {
+               color: $DarkGrayishBlue;
+            }
          }
          
       }
 
       &__overlay {
          display: none;
-         position: absolute;
+         position: fixed;
          top: 0;
          left: 0;
          width: 100vw;
