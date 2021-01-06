@@ -31,12 +31,16 @@
       top: 8rem;
       width: 90%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-50%) translateY(-2000px);
       
       background-color: $VaryLightGray;
       padding-top: 3rem;
       padding-bottom: 3rem;
       z-index: 10;
+
+      &.active {
+         transform: translateX(-50%) translateY(0);
+      }
 
       @include responsive($breakpointDesktop) {
          position: initial;
