@@ -9,7 +9,11 @@ export default function Navbar({ isMenuActive, handleClicMenu }) {
             <div className="navigation-brand">
                <Link href="/">
                   <a className="navigation-brand__link">
-                     <img className="navigation-brand__image" src="/logo.svg" alt="Logo de la empresa" />
+                     <img
+                        className="navigation-brand__image"
+                        src="/logo.svg"
+                        alt="Logo de la empresa"
+                     />
                   </a>
                </Link>
             </div>
@@ -29,7 +33,15 @@ export default function Navbar({ isMenuActive, handleClicMenu }) {
                   className="navigation-bars__button"
                   onClick={handleClicMenu}
                >
-                  <img src="/icon-hamburger.svg" alt="Menu" />
+                  <img
+                     className="navigation-bars__image"
+                     src={
+                        isMenuActive
+                           ? "icon-close.svg"
+                           : "/icon-hamburger.svg"
+                     }
+                     alt="Button menu"
+                  />
                </button>
             </div>
          </div>

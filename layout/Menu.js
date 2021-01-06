@@ -4,8 +4,21 @@ import Link from 'next/link'
 export default function Menu({ isMenuActive }) {
    return (
       <>
-         <div className="navigation-menu__overlay" aria-hidden="true"></div>
-         <ul className={isMenuActive ? 'navigation-menu active' : 'navigation-menu'}>
+         <div
+            className={
+               isMenuActive
+                  ? 'navigation-menu__overlay active'
+                  : 'navigation-menu__overlay'
+            }
+            aria-hidden="true">
+         </div>
+         <ul
+            className={
+               isMenuActive
+                  ? 'navigation-menu active'
+                  : 'navigation-menu'
+            }
+         >
             <li className="navigation-menu__item">
                <Link href="/">
                   <a className="navigation-menu__link">
