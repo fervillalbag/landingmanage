@@ -1,0 +1,125 @@
+
+.navigation {
+   height: 8rem;
+   position: sticky;
+   top: 0;
+
+   > .container {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      align-items: center;
+      height: inherit;
+      
+      @include responsive($breakpointDesktop) {
+         grid-template-columns: max-content 1fr max-content;
+      }
+   }
+
+   &-brand {
+
+      &__image {
+         width: 15rem;
+      }
+   }
+
+   &-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      position: fixed;
+      top: 8rem;
+      width: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+      
+      background-color: $VaryLightGray;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      z-index: 10;
+
+      @include responsive($breakpointDesktop) {
+         position: initial;
+         flex-direction: row;
+         justify-content: center;
+         padding-top: 0;
+         padding-bottom: 0;
+         transform: translateX(0);
+         background-color: transparent;
+      }
+
+      &__item {
+         margin-bottom: 2.5rem;
+
+         &:last-of-type {
+            margin-bottom: 0;
+         }
+
+         @include responsive($breakpointDesktop) {
+            margin-bottom: 0;
+            margin-right: 4rem;
+         }
+
+         &:last-of-type {
+            margin-right: 0;
+         }
+      }
+
+      &__link {
+         font-size: 1.75rem;
+         padding-top: 2rem;
+         padding-bottom: 2rem;
+         color: $DarkBlue;
+         font-weight: 700;
+         
+         @include responsive($breakpointDesktop) {
+            padding-top: 0;
+            padding-bottom: 0;
+            font-size: 1.5rem;
+         }
+         
+      }
+
+      &__overlay {
+         display: none;
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100vw;
+         height: 100vh;
+         background-color: hsla(0deg, 0%, 0%, 0.3);
+         z-index: 1;
+
+         &.active {
+            display: none;
+         }
+      }
+   }
+
+   &-footer {
+      justify-self: end;
+      display: none;
+
+      @include responsive($breakpointDesktop) {
+         display: block;
+      }
+
+      &__link {
+         @include button;
+      }
+   }
+
+   &-bars {
+      justify-self: end;
+
+      @include responsive($breakpointDesktop) {
+         display: none;
+      }
+
+      &__button {
+         border: none;
+         background-color: transparent;
+         outline: none;
+      }
+   }
+}
