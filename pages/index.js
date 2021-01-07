@@ -1,6 +1,7 @@
 
 import Head from 'next/head'
 import { useState } from 'react';
+import About from '../layout/About';
 import Header from '../layout/Header';
 import Navbar from '../layout/Navbar'
 
@@ -13,7 +14,7 @@ export default function Home() {
    }
 
    return (
-      <div>
+      <>
          <Head>
             <title>Create Next App</title>
             <link rel="icon" href="/favicon.png" />
@@ -26,6 +27,7 @@ export default function Home() {
             handleClicMenu={handleClicMenu}
          />
          <Header />
-      </div>
+         <About />
+      </>
    )
 }
