@@ -2,10 +2,25 @@
 .about {
    padding-top: 5rem;
    padding-bottom: 5rem;
+   position: relative;
 
    @include responsive($breakpointTablet) {
       padding-top: 10rem;
       padding-bottom: 10rem;
+   }
+
+   &:before {
+      content: '';
+      display: block;
+      width: 81.4rem;
+      height: 81.4rem;
+      background-image: url('/bg-tablet-pattern.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      z-index: -1;
+      bottom: -40rem;
+      left: -50rem;
    }
    
    > .container {
@@ -45,6 +60,10 @@
       grid-template-columns: max-content 1fr;
       grid-template-rows: repeat(2, max-content);
       margin-bottom: 3rem;
+
+      @include responsive($breakpointTablet) {
+         grid-column-gap: 1.2rem;
+      }
    }
 
    &__number {
@@ -79,7 +98,8 @@
       }
 
       @include responsive($breakpointTablet) {
-         padding-left: 1.25rem;
+         padding-left: 0;
+         font-size: 1.8rem;
       }
 
       &:before {

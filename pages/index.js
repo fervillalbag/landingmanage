@@ -4,6 +4,7 @@ import { useState } from 'react';
 import About from '../layout/About';
 import Header from '../layout/Header';
 import Navbar from '../layout/Navbar'
+import Testimonials from '../layout/Testimonials';
 
 export default function Home() {
 
@@ -28,6 +29,7 @@ export default function Home() {
          />
          <Header />
          <About />
+         <Testimonials />
       </>
    )
 }
