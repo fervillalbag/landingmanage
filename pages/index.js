@@ -7,6 +7,7 @@ import About from '../layout/About'
 import Header from '../layout/Header'
 import Testimonials from '../layout/Testimonials'
 import Join from '../layout/Join'
+import Footer from '../layout/Footer'
 
 export default function Home() {
 
@@ -33,6 +34,7 @@ export default function Home() {
          <About />
          <Testimonials />
          <Join />
+         <Footer />
       </>
    )
 }
