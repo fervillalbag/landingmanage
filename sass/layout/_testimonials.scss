@@ -61,6 +61,10 @@
 
    &__link {
       @include button;
-      font-size: 1.4rem;
+      font-size: 1.7rem;
+
+      @include responsive($breakpointTablet) {
+         font-size: 1.4rem;
+      }
    }
 }

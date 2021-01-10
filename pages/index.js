@@ -1,10 +1,12 @@
 
 import Head from 'next/head'
-import { useState } from 'react';
-import About from '../layout/About';
-import Header from '../layout/Header';
+import { useState } from 'react'
+
 import Navbar from '../layout/Navbar'
-import Testimonials from '../layout/Testimonials';
+import About from '../layout/About'
+import Header from '../layout/Header'
+import Testimonials from '../layout/Testimonials'
+import Join from '../layout/Join'
 
 export default function Home() {
 
@@ -30,6 +32,7 @@ export default function Home() {
          <Header />
          <About />
          <Testimonials />
+         <Join />
       </>
    )
 }
