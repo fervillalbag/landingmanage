@@ -70,6 +70,10 @@
       color: $BrightRed;
       font-size: 1.7rem;
 
+      &:hover {
+         background-color: lighten($color: $BrightRed, $amount: 30%);
+      }
+
       @include responsive($breakpointTablet) {
          font-size: 1.4rem;
       }

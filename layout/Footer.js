@@ -3,6 +3,11 @@ import Link from 'next/link'
 import React from 'react'
 
 export default function Footer() {
+
+   const handleSubmit = (e) => {
+      e.preventDefault()
+   }
+
    return (
       <footer className="footer">
          <div className="container">
@@ -11,9 +16,12 @@ export default function Footer() {
                   <input type="text" className="footer-form__input" />
                </div>
                <div className="footer-form__action">
-                  <button className="footer-form__submit">
+                  <button
+                     className="footer-form__submit"
+                     onClick={handleSubmit}
+                  >
                      Go
-               </button>
+                  </button>
                </div>
             </form>
             <div className="footer-navigation">
@@ -116,7 +124,9 @@ export default function Footer() {
                </Link>
             </div>
             <div className="footer-copy">
-
+               <p className="footer-copy__text">
+                  Copyright 2020. All Rights Reserved
+               </p>
             </div>
          </div>
       </footer>
